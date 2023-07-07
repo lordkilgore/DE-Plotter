@@ -28,7 +28,7 @@ def em (func, xn, yn, dx, endx):
         pygame.draw.circle(win, "red", ((math.fabs(-(w / 2) - (15*xn))), ((h / 2) - (15*yn))), 1)
         pygame.display.flip()
 
-        # Improved Euler's Function
+        # Improved Euler's Method
         if endx - xn > 0.0001:
             yn1 = yn + ((dx / 2) * (func(xn, yn) + func(xn + dx, (yn + dx * func(xn, yn)))))
             yn = yn1
